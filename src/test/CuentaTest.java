@@ -60,12 +60,9 @@ class CuentaTest {
 		cuenta2.retirar(200.0);
 		cuenta3.ingresar(50.0);
 		cuenta3.retirar(100.0);
-		
-		cuenta2.setSaldo(-250.0);
-		cuenta3.setSaldo(-450);
 
 		assertEquals(-250.0,cuenta2.getSaldo());
-		assertEquals(-450.0,cuenta3.getSaldo());
+		assertEquals(-500.0,cuenta3.getSaldo());
 		
 	}
 }
