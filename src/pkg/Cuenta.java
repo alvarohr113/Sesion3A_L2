@@ -2,7 +2,8 @@ package pkg;
 
 public class Cuenta {
 
-	double saldo;
+	private double saldo;
+	private String numero,Nombre;
 
 	public double getSaldo() {
 		return saldo;
@@ -14,6 +15,13 @@ public class Cuenta {
 	public Cuenta(double i) {
 		// TODO Auto-generated constructor stub
 		this.saldo = i;
+	}
+
+	public Cuenta(double d, String numeroC, String NombreC) {
+		// TODO Auto-generated constructor stub
+		this.saldo = d;
+		this.numero = numeroC;
+		this.Nombre = NombreC;
 	}
 
 	public void ingresar(double i) {

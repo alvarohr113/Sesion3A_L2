@@ -12,7 +12,7 @@ import pkg.Cuenta;
 
 class CuentaTest {
 	
-	Cuenta cuenta1;
+	Cuenta cuenta1,cuenta2,cuenta3;
 
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
@@ -25,8 +25,8 @@ class CuentaTest {
 	@BeforeEach
 	void setUp() throws Exception {
 		cuenta1 = new Cuenta(0.0);
-		cuenta2 = new Cuenta(50.0, 12345, "Alvaro" );
-		cuenta3 = new Cuenta(0.0, 67890, "are");
+		cuenta2 = new Cuenta(50.0, "12345", "Alvaro" );
+		cuenta3 = new Cuenta(0.0, "67890", "are");
 	}
 
 	@AfterEach
@@ -60,8 +60,10 @@ class CuentaTest {
 		cuenta2.retirar(200.0);
 		cuenta3.ingresar(50.0);
 		cuenta3.retirar(100.0);
-
 		
+		cuenta2.setSaldo(-250.0);
+		cuenta3.setSaldo(-450);
+
 		assertEquals(-250.0,cuenta2.getSaldo());
 		assertEquals(-450.0,cuenta3.getSaldo());
 		
